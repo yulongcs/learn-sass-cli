@@ -1,0 +1,208 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ /*
+  *CONTENTS
+  *
+  *SETTINGS
+  *variables...............................变量集中存储文件
+  *mixin...................................mixin集中存储文件
+  *
+  *TOOLS
+  *
+  *COMPONENTS
+  *reset...................................Compass内置浏览器重置样式文件
+  *
+  *BUSINESS
+  *
+  *BASE
+  *screen.scss.............................针对当前站点主页的样式修饰
+  *
+  */
+
+@import "variables", "mixin";
+
+@import "compass/reset";
+
+@import "compass/css3";
+@import "compass/support";
+@import "compass/typography";
+@import "compass/utilities";
+@import "compass/utilities/print";
+@import "compass/utilities/tables";
+@import "compass/utilities/general";
+@import "compass/utilities/sprit"
+
+
+@include print-utilities(screen);
+
+// @debug browsers();
+
+// $supported-browsers: chrome;
+
+ $browser-minimum-versions: ("ie": "6");
+
+div {
+	// appearance:button;
+
+	@include appearance("button")
+}
+
+.test-inline-block{
+	@include inline-block();
+}
+
+.test-opacity{
+	@include opacity(.3);
+}
+
+.test-css3{
+	@include box-shadow(1px 1px 3px 2px #cfcecf);
+}
+
+a {
+	@include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
+}
+
+a {
+	@include unstyled-link();
+}
+
+.list-unstyled{
+	@include no-bullets();
+}
+
+.list-unstyled-li{
+	@include no-bullet();
+}
+
+.list-inline{
+	@include inline-list();
+}
+
+.list-horizontal{
+	@include horizontal-list(false);
+}
+
+.list-inline-block{
+	@include inline-block-list(7px);
+}
+
+.text-force-wrop{
+	@include force-wrap();
+}
+
+.text-nowrap{
+	@include nowrap();
+}
+
+$use-mozilla-ellipsis-binding: true;
+.text-ellipsis {
+	@include ellipsis();
+}
+
+.text-hide{
+	//@include hide-text();
+	@include squish-text();
+}
+
+.btn-find{
+	@include replace-text("http://cdn.qq.com/images/find-btn.png");
+}
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline();
+
+ body{
+ 	//@include debug-vertical-alignment();
+ }
+
+
+
+h1{
+	/* font-size: 3em;  48 / 16 =3 */ 
+	/* line-height: 1.5em;  72/48 = 1.5   72= 24的整数倍 */ 
+	@include adjust-font-size-to(3em);
+}
+h2{
+	/* font-size: 2.25em;  36 / 16 =3 */
+	/* line-height: 1.33333em; 48 /36 =1.33333*/
+	@include adjust-font-size-to(2.25em);
+}
+h3{
+	/* font-size: 1.5em; 24 / 16 =3 */
+	/* line-height: 2em;  48/24 = 2 */
+	@include adjust-font-size-to(1.5em);
+}
+h4{
+	/* font-size: 1.3125em; 21 / 16 =3 */
+	/* line-height: 2.28571em;48/21 = 2.28571 */
+	@include adjust-font-size-to(1.3125em);
+}
+h5{
+	/* font-size: 1.125em; 18 / 16 =3 */
+	/* line-height: 1.33333em; 24/18 = 1.333333*/
+	@include adjust-font-size-to(1.125em);
+}
+h6{
+	/* font-size: 1em; 16 / 16 =3 */
+	@include adjust-font-size-to(1em);
+}
+p{
+	@include adjust-font-size-to(1em);
+	@include leader(2);
+	@include trailer();
+	/* margin: 1.5em 0; */
+}
+
+
+.analyzer-logo{ /* cache buster */
+	background-image: image-url('analyzer.png')
+}
+
+
+.goods-price{
+	$table-color: #7a98c6;
+
+	@include outer-table-borders();
+	@include inner-table-borders(1px, darken($table-color, 40%));
+	@include table-scaffolding();
+
+	@include alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222);
+}
+.odd{
+
+}
+.even{
+
+}
+.numeric{
+
+}
+
+.clearfix {
+	// @include clearfix();
+	// @include pie-clearfix();
+	 @include legacy-pie-clearfix();
+}
+.pull-left{
+	@include float-left();
+	// @include float(left);
+}
+
+.need-has-layout{
+	@include has-layout();
+}
+
+.underscore-hack-display{
+	@include underscore-hack(display,block,inline);
+}
+.test-min-height{
+	@include min-height(10px);
+}
+
+.teg-cloud-container{
+	@include tag-cloud(24px)
+}

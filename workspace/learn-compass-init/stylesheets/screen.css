@@ -1,0 +1,43 @@
+/*
+Error: Invalid CSS after "...tilities/sprit"": expected selector or at-rule, was "@include print-..."
+        on line 38 of E:/GitHub/learn-sass-cli/workspace/learn-compass-init/sass/screen.scss
+
+33: @import "compass/utilities/tables";
+34: @import "compass/utilities/general";
+35: @import "compass/utilities/sprit"
+36: 
+37: 
+38: @include print-utilities(screen);
+39: 
+40: // @debug browsers();
+41: 
+42: // $supported-browsers: chrome;
+43: 
+
+Backtrace:
+E:/GitHub/learn-sass-cli/workspace/learn-compass-init/sass/screen.scss:38
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:1162:in `expected'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:1098:in `expected'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:43:in `parse'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/engine.rb:405:in `_to_tree'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/engine.rb:280:in `render'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `each'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:328:in `block in watch'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/vendor/listen/lib/listen/listener.rb:252:in `call'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.15/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...tilities/sprit\"\": expected selector or at-rule, was \"@include print-...\"\A         on line 38 of E:/GitHub/learn-sass-cli/workspace/learn-compass-init/sass/screen.scss\A \A 33: @import \"compass/utilities/tables\";\A 34: @import \"compass/utilities/general\";\A 35: @import \"compass/utilities/sprit\"\A 36: \A 37: \A 38: @include print-utilities(screen);\A 39: \A 40: // @debug browsers();\A 41: \A 42: // $supported-browsers: chrome;\A 43: "; }
